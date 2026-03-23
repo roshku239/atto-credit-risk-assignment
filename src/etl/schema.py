@@ -6,7 +6,7 @@ TransactionsSchema = DataFrameSchema(
     {
         "transaction_id": Column(pa.String, nullable=False),
         "customer_id": Column(pa.String, nullable=False),
-        "txn_times": Column(pa.String, nullable=False),  # parsed to datetime later
+        "txn_timestamp": Column(pa.String, nullable=False),  # parsed to datetime later
         "amount": Column(pa.Float, nullable=False),
         "txn_type": Column(
             pa.String,
