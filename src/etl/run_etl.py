@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from src.etl.schemas import TransactionsSchema, LabelsSchema
+from src.etl.schema import TransactionsSchema, LabelsSchema
 from src.etl.text_cleaning import clean_description
 from src.etl.feature_engineering import add_transaction_features, add_customer_features
 from src.etl.aggregation import aggregate_customer_features
