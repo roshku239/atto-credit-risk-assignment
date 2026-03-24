@@ -58,10 +58,12 @@ Example response:
 
 
 **1. What part of the exercise did you find most challenging, and why?**
+
 The trickiest part was aligning the raw CSV structure, schema validation, and feature engineering logic.
 This mirrors real world challenges: upstream data often drifts, and ensuring the pipeline is both strict (to catch issues) and flexible (to evolve safely) requires careful design.I also kept the ETL lightweight, but still production oriented, clear and easy to maintain.
 	
 **2. What tradeoffs did you make? (e.g., speed vs. accuracy, simplicity vs. completeness)**
+
 Simplicity vs. Completeness
 Choosen a clean, Pandas based ETL rather than Spark. For this dataset size, Pandas was the right choice to iterate on and easier to read.
 
@@ -84,6 +86,7 @@ can be deployed on Azure Container Apps
 add lightweight monitoring to track the cost and performance
 
 **4. How would you deploy the FastAPI service and make the model artifact available?**
+
 I would containerise the FastAPI service, push the image to Azure Container Registry, and deploy it to Azure Container Apps with autoscaling. 
 It can also be bundle the model artifact inside the Docker image for minimal latency and operational simplicity. 
 If model updates become frequent, I’d move the artifact to Azure Blob Storage and load it at startup using Managed Identity. 
