@@ -13,9 +13,11 @@ This repository contains a complete end‑to‑end solution for Atto’s credit�
     Clear documentation of assumptions, trade‑offs, and how this system would scale in a real‑world environment
 
 **Repository Structure**
+
 <img width="260" height="458" alt="image" src="https://github.com/user-attachments/assets/ebade43a-19e5-4674-aa82-3b616fedf10c" />
 
 **Create the Virtual Environment**
+
 rm -rf venv
 python3.10 -m venv venv
 source venv/bin/activate
