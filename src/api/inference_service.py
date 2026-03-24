@@ -69,7 +69,8 @@ def predict(payload: CustomerFeatures):
     X = pd.DataFrame([payload.dict()]).drop(columns=["customer_id"])
 
     try:
-        proba = float(model.predict_proba(X)[0][1])
+        features = df.values
+        proba = model.predict_proba(features)[0][1]
         pred = int(proba >= 0.5)
     except Exception as e:
         logger.error(f"Prediction failed: {e}")
