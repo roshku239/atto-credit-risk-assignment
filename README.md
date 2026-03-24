@@ -35,21 +35,46 @@ Code snippet
 └── tests/
     ├── test_etl_run.py
 
-3. How to Run the Project
+3. Create the virtual environment
+rm -rf venv
+python3.10 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+
+4. How to Run the Project
 Install dependencies
 pip install -r requirements.txt
 
 Run the ETL pipeline
-python -m src/etl/run_etl.py
+python -m src.etl.run_etl
 
 This generates:
 artifacts/training_set.csv
 
+<img width="560" height="143" alt="image" src="https://github.com/user-attachments/assets/60dcac3d-3bc1-4c2c-bec6-52ab061b9f15" />
+
 Start the FastAPI service
 uvicorn src.api.inference_service:app --reload
 
-Test the API
-POST http://localhost:8000/predict
+<img width="953" height="230" alt="image" src="https://github.com/user-attachments/assets/aa0f6e19-48ee-4508-a9f3-337d9709c9bb" />
+
+Test with sample payload
+Swagger UI → http://127.0.0.1:8000/docs
+Sample payload:
+{
+  "customer_id": "CUST_0001",
+  "txn_count": 3,
+  "total_debit": 65.88,
+  "total_credit": 2500.00,
+  "avg_amount": 855.33,
+  "kw_rent": 0,
+  "kw_netflix": 1,
+  "kw_tesco": 1,
+  "kw_payroll": 1,
+  "kw_bonus": 0
+}
+Response:
+<img width="784" height="400" alt="image" src="https://github.com/user-attachments/assets/b2373d12-610d-4677-9c57-871534a8730e" />
 
 4. Part 1 – Data Engineering Approach
 
