@@ -19,9 +19,13 @@ This repository contains a complete end‑to‑end solution for Atto’s credit�
 **Create the Virtual Environment**
 
 rm -rf venv
+
 python3.10 -m venv venv
+
 source venv/bin/activate
+
 pip install --upgrade pip
+
 **Note:** Python 3.10 is recommended for compatibility with the model and scikit‑learn version used.
 
 **How to Run the Project**
