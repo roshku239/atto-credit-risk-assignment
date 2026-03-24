@@ -72,7 +72,7 @@ Example response:
 **1. What part of the exercise did you find most challenging, and why?**
 
 The trickiest part was aligning the raw CSV structure, schema validation, and feature engineering logic.
-This mirrors real world challenges: upstream data often drifts, and ensuring the pipeline is both strict (to catch issues) and flexible (to evolve safely) requires careful design.I also kept the ETL lightweight, but still production oriented, clear and easy to maintain.
+This mirrors real world challenges around upstream data often drifts and ensuring the pipeline is both strict (to catch issues) and flexible (to evolve safely) requires careful design. I kept the ETL lightweight, but still production oriented, clear and easy to maintain.
 	
 **2. What tradeoffs did you make? (e.g., speed vs. accuracy, simplicity vs. completeness)**
 
