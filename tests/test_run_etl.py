@@ -23,9 +23,9 @@ def setup_temp_env(tmp_path):
         "customer_id": ["C1", "C1", "C2"],
         "transaction_id": ["T1", "T2", "T3"],
         "amount": [-50, 200, -10],
-        "type": ["debit", "credit", "debit"],
+        "txn_type": ["debit", "credit", "debit"],
         "description": ["TESCO 123", "SALARY PAYMENT", "RENT FEB"],
-        "timestamp": ["2024-01-01", "2024-01-02", "2024-01-03"]
+        "txn_timestamp": ["2024-01-01", "2024-01-02", "2024-01-03"]
     })
     tx.to_csv(data_dir / "transactions.csv", index=False)
 
