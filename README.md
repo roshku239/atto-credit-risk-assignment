@@ -33,7 +33,8 @@ This generates artifacts/training_set.csv
 uvicorn src.api.inference_service:app --reload
 <img width="937" height="241" alt="image" src="https://github.com/user-attachments/assets/61169643-65ee-403e-b84f-6c8eee9d66a9" />
 Swagger UI available at: http://127.0.0.1:8000/docs
-5. Test With Sample Payload
+4. Test With Sample Payload
+
 {
   "customer_id": "CUST_0001",
   "txn_count": 3,
