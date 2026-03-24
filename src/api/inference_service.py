@@ -3,8 +3,8 @@ from pydantic import BaseModel
 import joblib
 import pandas as pd
 
-from src.paths import MODEL_FILE
-from src.logging_config import get_logger
+from src.utils.paths import MODEL_FILE
+from src.utils.logging_config import get_logger
 
 logger = get_logger(__name__)
 
